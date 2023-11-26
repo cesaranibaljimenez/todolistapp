@@ -7,7 +7,11 @@ function TodoForm({addTodo}){
   
   const handleSubmit = e => {
     e.preventDefault();
-    if(!value) return;
+
+    if(!value.trim()){
+
+      return;
+    } 
     addTodo(value);
     setValue('');
   };
