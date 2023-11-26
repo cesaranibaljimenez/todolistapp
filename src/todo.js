@@ -1,9 +1,10 @@
 function Todo({todo,index,remove}){
-    function handle(){
+    function handleRemove(){
         remove(index);
     }
-   return <div className="todo"  onClick={handle}>
-    {todo.text}(-)</div> 
+   return <div className="todo"  onClick={handleRemove}>
+    {todo.text}<span style={{cursor:'pointer'}}>(-)</span>
+    </div> 
 }
 
 export default Todo;
