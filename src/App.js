@@ -32,19 +32,20 @@ function App() {
       let temp = [...todos];
       temp.splice(index, 1);
       setTodos(temp);
-         
+     
 };
 
   return (
-    <div className="app">
+    <div>
+      <h1>Todo App</h1>
       <div className="todo-list">
       {todos.map((todo, i) => (
         <Todo  index={i} key={i} todo={todo} remove={removeTodo} />
       ))}
-      <TodoForm addTodo={addTodo} />
     </div>
+    <TodoForm addTodo={addTodo} />
     </div>
   );
+}
 
-
-root.render(<App />);
+export default App;
